@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+require("dotenv").config
 
 
 app.get('/api/get', (req,res) => {
@@ -13,10 +14,10 @@ app.get('/api/get_user_details',(req,res) => {
             name:'stam',
             age:22,
             contact: 1234
-        }
+        },env:process.env.NAME
     })
 })
 
-app.listen(8080,()=> {
-    console.log("lintening to 8080");
+app.listen(process.env.PORT,()=> {
+    console.log("lintening to 8000");
 })
