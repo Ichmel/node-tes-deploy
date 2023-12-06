@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-require("dotenv").config
+require("dotenv").config()
 
 
 app.get('/api/get', (req,res) => {
@@ -9,7 +9,7 @@ app.get('/api/get', (req,res) => {
 
 
 app.get('/api/get_user_details',(req,res) => {
-    res.sed({
+    res.send({
         user:{
             name:'stam',
             age:22,
